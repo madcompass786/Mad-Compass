@@ -331,9 +331,8 @@ export default function Home() {
               A gentle guide through what makes every plan feel bespoke.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#655b4f]">
-              The homepage should reassure visitors that planning is never
-              rushed: it begins with a conversation, evolves with your feedback,
-              and lands in a holiday shaped for you.
+              Every journey begins with a conversation. We listen, we plan, and
+              we refine — until your holiday feels exactly right.
             </p>
           </div>
           <div className="rounded-4xl border border-[#f0d6d1] bg-[#fff8f5] p-8">
