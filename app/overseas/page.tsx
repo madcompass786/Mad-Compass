@@ -37,15 +37,25 @@ const journeys = [
     href: "/contact",
   },
   {
-    title: "Dubai luxury getaway",
-    subtitle: "Modern skylines, desert adventures, and world-class hospitality",
+    title: "Sri Lanka coastal escape",
+    subtitle: "Golden beaches, surf towns, and rich island culture",
     description:
-      "Experience iconic landmarks, premium shopping, fine dining, and exclusive desert experiences with effortless comfort.",
-    badge: "Dubai",
-    image: "/images/dubai.jpg",
+      "Travel through tea country, wildlife reserves, and warm coastal villages with an easy, unhurried rhythm.",
+    badge: "Sri Lanka",
+    image: "/images/srilanka.jpg",
     href: "/contact",
   },
 ];
+
+const japanJourney = {
+  title: "Japan soft luxury discovery",
+  subtitle: "Culture, food, and quiet temples",
+  description:
+    "Curated routes through Kyoto, Kanazawa, and Tokyo with comfort-led stays and authentic local experiences.",
+  badge: "Japan",
+  image: "/images/Japan-soft-luxury-discovery.jpg",
+  href: "/contact",
+};
 
 export const metadata: Metadata = {
   title: "Overseas Travel | Mad Compass",
@@ -66,11 +76,9 @@ export default function OverseasPage() {
         imageAlt="An elegant overseas travel experience"
       />
 
-      <CruiseAdBanner />
-
       <Reveal className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div>
+          <div className="max-w-3xl">
             {/* <p className="text-sm uppercase tracking-[0.3em] text-[#c20b0b]">
               Why clients choose us
             </p> */}
@@ -118,7 +126,24 @@ export default function OverseasPage() {
       </Reveal>
 
       <Reveal className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-12">
+        <div className="mb-10 max-w-3xl">
+          <p className="flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-[red]">
+            Cruise your way into an unforgettable escape
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-[#17120f] sm:text-4xl">
+            Iconic cruise experiences and a world of overseas discovery.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-black/70">
+            From family magic and all-suite indulgence at sea to culture-led
+            city stays, island retreats, and slower journeys on land, choose an
+            experience that makes every part of your holiday worth remembering.
+          </p>
+        </div>
         <div className="grid gap-6 lg:grid-cols-3">
+          <CruiseAdBanner />
+          <PhotoShowcaseCard {...japanJourney} />
+        </div>
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {journeys.map((journey) => (
             <PhotoShowcaseCard key={journey.title} {...journey} />
           ))}

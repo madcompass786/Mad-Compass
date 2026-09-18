@@ -36,7 +36,7 @@ export function PageHero({
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <motion.div
           initial={{ opacity: 0, y: 24 }}

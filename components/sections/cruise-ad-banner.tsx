@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, BookOpen, ExternalLink, Ship, X } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { ArrowUpRight, BookOpen, ExternalLink, X } from "lucide-react";
 
 const cruiseOffers = [
   {
@@ -13,8 +12,7 @@ const cruiseOffers = [
       "Step aboard Disney Adventure for world-class shows, character moments, themed dining, and seven unforgettable areas at sea.",
     cta: "View Disney brochure",
     pdf: "/cruises/Disney%20Cruise%20Line.pdf",
-    className: "bg-[#17356e] text-[#fff8df]",
-    accent: "bg-[#e9bd62] text-[#17356e]",
+    image: "/images/disneyCruise.jpg",
   },
   {
     eyebrow: "StarDream Cruises",
@@ -23,8 +21,7 @@ const cruiseOffers = [
       "Discover Genting Dream: vibrant dining, rooftop adventures, indulgent spaces, and Southeast Asia beyond the horizon.",
     cta: "View StarDream brochure",
     pdf: "/cruises/Star%20Dream%20Cruises.pdf",
-    className: "bg-[#087f88] text-white",
-    accent: "bg-[#f6d58a] text-[#153448]",
+    image: "/images/star.jpg",
   },
 ];
 
@@ -45,62 +42,44 @@ export function CruiseAdBanner() {
   }, [selectedOffer]);
 
   return (
-    <section className="relative overflow-hidden  px-6 py-16 text-white sm:px-8 lg:px-12">
-      <div className="relative mx-auto max-w-7xl">
-        <div className="flex flex-col justify-between gap-6 border-b border-white/15 pb-8 lg:flex-row lg:items-end">
-          <div className="max-w-3xl">
-            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#ff008a]">
-              <Ship className="size-4" /> Cruise your way into an unforgettable
-              escape
-            </p>
-            <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight text-[#c20b0b] sm:text-5xl">
-              Two iconic cruise experiences. One extraordinary way to see Asia.
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-[#ff008a] sm:text-lg">
-              From family magic to all-suite indulgence, choose the kind of
-              holiday that makes the sea part of the story.
-            </p>
+    <>
+      {cruiseOffers.map((offer) => (
+        <article
+          key={offer.eyebrow}
+          className="group overflow-hidden rounded-4xl border border-[#ece7e4] bg-[#111111] text-white shadow-[0_24px_90px_rgba(17,17,17,0.16)] transition duration-300 hover:-translate-y-1"
+        >
+          <div className="relative h-72 overflow-hidden">
+            <Image
+              src={offer.image}
+              alt={offer.eyebrow}
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-6">
+              <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] uppercase tracking-[0.3em] text-white/85">
+                {offer.eyebrow}
+              </span>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
+                {offer.title}
+              </h3>
+            </div>
           </div>
-          <span className="w-fit border border-[#f6d58a]/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#f6d58a]">
-            Featured cruise escapes
-          </span>
-        </div>
-
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          {cruiseOffers.map((offer) => (
-            <article
-              key={offer.eyebrow}
-              className={`relative overflow-hidden rounded-[2rem] p-7 shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:p-8 ${offer.className}`}
+          <div className="space-y-4 bg-[#9D0202] p-6">
+            <p className="text-sm leading-7 text-[#f5d9cf]">
+              {offer.description}
+            </p>
+            <button
+              type="button"
+              onClick={() => setSelectedOffer(offer)}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:text-[#f6b4aa]"
             >
-              <div className="absolute -right-16 -top-20 size-48 rounded-full border-[1.5rem] border-white/10" />
-              <div className="relative">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] opacity-80">
-                  {offer.eyebrow}
-                </p>
-                <h3 className="mt-5 max-w-md text-3xl font-semibold leading-tight sm:text-4xl">
-                  {offer.title}
-                </h3>
-                <p className="mt-4 max-w-xl text-sm leading-7 opacity-85 sm:text-base">
-                  {offer.description}
-                </p>
-                <Button
-                  type="button"
-                  className={`mt-7 ${offer.accent} hover:brightness-95`}
-                  onClick={() => setSelectedOffer(offer)}
-                >
-                  {offer.cta} <ArrowUpRight className="size-4" />
-                </Button>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <p className="mt-6 text-xs leading-5 text-[#bfcbd4]">
-          Cruise itineraries, inclusions, sailing dates, and availability are
-          subject to change. Mad Compass can help you compare options and plan
-          the wider holiday.
-        </p>
-      </div>
+              {offer.cta} <ArrowUpRight className="size-4" />
+            </button>
+          </div>
+        </article>
+      ))}
 
       {selectedOffer ? (
         <div
@@ -178,6 +157,6 @@ export function CruiseAdBanner() {
           </div>
         </div>
       ) : null}
-    </section>
+    </>
   );
 }
