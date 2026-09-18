@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CruiseAdBanner } from "@/components/sections/cruise-ad-banner";
 import { EnquiryForm } from "@/components/sections/enquiry-form";
 import { PageHero } from "@/components/sections/page-hero";
 import { PhotoShowcaseCard } from "@/components/sections/photo-showcase-card";
@@ -65,13 +66,15 @@ export default function OverseasPage() {
         imageAlt="An elegant overseas travel experience"
       />
 
+      <CruiseAdBanner />
+
       <Reveal className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#c20b0b]">
+            {/* <p className="text-sm uppercase tracking-[0.3em] text-[#c20b0b]">
               Why clients choose us
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[#17120f] sm:text-4xl">
+            </p> */}
+            <h2 className="mt-3 text-3xl font-semibold text-red-700 sm:text-4xl">
               A wider world, shaped with calm expertise and personal attention.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#655b4f]">
@@ -108,7 +111,9 @@ export default function OverseasPage() {
               </Button>
             </div>
           </div>
-          <EnquiryForm />
+          <div className="hidden lg:block">
+            <EnquiryForm />
+          </div>
         </div>
       </Reveal>
 

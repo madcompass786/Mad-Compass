@@ -109,7 +109,9 @@ export default function DomesticPage() {
               </Button>
             </div>
           </div>
-          <EnquiryForm />
+          <div className="hidden lg:block">
+            <EnquiryForm />
+          </div>
         </div>
       </Reveal>
 

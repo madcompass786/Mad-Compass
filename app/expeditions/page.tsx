@@ -38,7 +38,8 @@ const journeys = [
   },
   {
     title: "Annapurna Circuit",
-    subtitle: "Nepal's most diverse trek — valleys, passes, and ancient villages",
+    subtitle:
+      "Nepal's most diverse trek — valleys, passes, and ancient villages",
     description:
       "A 10–16 day circuit through dramatic landscape variety. Tailored entry and exit points based on your available time and preferred intensity.",
     badge: "CIRCUIT",
@@ -109,7 +110,9 @@ export default function ExpeditionsPage() {
               </Button>
             </div>
           </div>
-          <EnquiryForm />
+          <div className="hidden lg:block">
+            <EnquiryForm />
+          </div>
         </div>
       </Reveal>
 
@@ -120,10 +123,13 @@ export default function ExpeditionsPage() {
           ))}
         </div>
         <p className="mt-6 text-sm leading-7 text-[#786d64]">
-          More Expedition routes coming soon.{' '}
-          <Link href="/contact" className="font-medium text-[#c20b0b] transition hover:text-[#a70a0a]">
+          More Expedition routes coming soon.{" "}
+          <Link
+            href="/contact"
+            className="font-medium text-[#c20b0b] transition hover:text-[#a70a0a]"
+          >
             Enquire
-          </Link>{' '}
+          </Link>{" "}
           directly and a specialist will share what&apos;s currently available.
         </p>
       </Reveal>
