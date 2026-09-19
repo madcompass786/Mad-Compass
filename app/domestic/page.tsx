@@ -18,26 +18,26 @@ const highlights = [
 ];
 
 const journeys = [
-  {
-    title: "Goa beaches & coastal charm",
-    subtitle: "Golden shores, Portuguese heritage, and vibrant beach life",
-    description:
-      "Relax with scenic beach stays, sunset cruises, local seafood, and seamless private transfers.",
-    badge: "Coastal escape",
-    image: "/images/goa.jpg",
-    href: "/contact",
-    price: "",
-  },
-  {
-    title: "Darjeeling & Sikkim pause",
-    subtitle: "Cloud forests, monastery views, and warm local hospitality",
-    description:
-      "Ideal for couples or families who want altitude, scenery, and stillness.",
-    badge: "Mountain escape",
-    image: "/images/darjeeling.jpg",
-    href: "/contact",
-    price: "",
-  },
+  // {
+  //   title: "Goa beaches & coastal charm",
+  //   subtitle: "Golden shores, Portuguese heritage, and vibrant beach life",
+  //   description:
+  //     "Relax with scenic beach stays, sunset cruises, local seafood, and seamless private transfers.",
+  //   badge: "Coastal escape",
+  //   image: "/images/goa.jpg",
+  //   href: "/contact",
+  //   price: "",
+  // },
+  // {
+  //   title: "Darjeeling & Sikkim pause",
+  //   subtitle: "Cloud forests, monastery views, and warm local hospitality",
+  //   description:
+  //     "Ideal for couples or families who want altitude, scenery, and stillness.",
+  //   badge: "Mountain escape",
+  //   image: "/images/darjeeling.jpg",
+  //   href: "/contact",
+  //   price: "",
+  // },
   {
     title: "Rajasthan heritage circuit",
     subtitle: "Palaces, forts, and private experiences between cities",
@@ -46,7 +46,8 @@ const journeys = [
     badge: "Culture-led",
     image: "/images/rajasthan.jpg",
     href: "/contact",
-    price: "",
+    price: "50,000",
+    brochureHref: "/packages/Mad_Compass_Rajasthan_Heritage_Circuit.pdf",
   },
   {
     title: "Meghalaya, where the hills breathe",
@@ -56,7 +57,9 @@ const journeys = [
     badge: "Hill escape",
     image: "/images/meghalaya.jpg",
     href: "/contact",
-    price: "",
+    price: "30,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Meghalaya%20Signature%20Itinerary.pdf",
   },
   {
     title: "Kashmir, the great valley escape",
@@ -66,7 +69,9 @@ const journeys = [
     badge: "Valley retreat",
     image: "/images/kashmir.jpg",
     href: "/contact",
-    price: "",
+    price: "33,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Kashmir%20Signature%20Itinerary.pdf",
   },
   {
     title: "Andaman Islands, at an easy island pace",
@@ -76,7 +81,9 @@ const journeys = [
     badge: "Island escape",
     image: "/images/andaman.jpg",
     href: "/contact",
-    price: "",
+    price: "30,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Andaman%20Signature%20Itinerary.pdf",
   },
 ];
 

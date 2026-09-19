@@ -10,20 +10,20 @@ const cruiseOffers = [
     title: "Make your next holiday a story worth telling.",
     description:
       "Step aboard Disney Adventure for world-class shows, character moments, themed dining, and seven unforgettable areas at sea.",
-    cta: "View Disney brochure",
+    cta: "View Brochure",
     pdf: "/cruises/Disney%20Cruise%20Line.pdf",
     image: "/images/disneyCruise.jpg",
-    price: "",
+    price: "81,700",
   },
   {
     eyebrow: "StarDream Cruises",
     title: "Where the journey becomes the destination.",
     description:
       "Discover Genting Dream: vibrant dining, rooftop adventures, indulgent spaces, and Southeast Asia beyond the horizon.",
-    cta: "View StarDream brochure",
+    cta: "View Brochure",
     pdf: "/cruises/Star%20Dream%20Cruises.pdf",
     image: "/images/star.jpg",
-    price: "",
+    price: "37,300",
   },
 ];
 
@@ -73,9 +73,15 @@ export function CruiseAdBanner() {
               {offer.description}
             </p>
             <div className="mt-auto flex items-end justify-between gap-4 pt-2">
-              <p className="text-sm font-medium text-white/90">
-                Starting from INR{offer.price ? ` ${offer.price}` : ""}
-              </p>
+              <div>
+                <p className="text-xs uppercase tracking-[0.16em] text-white/65">
+                  Starting from
+                </p>
+                <p className="mt-1 text-xl font-semibold tracking-tight text-white">
+                  {offer.price ? `INR ${offer.price}` : "On request"}
+                </p>
+                <p className="mt-1 text-xs text-white/65">per person</p>
+              </div>
               <button
                 type="button"
                 onClick={() => setSelectedOffer(offer)}

@@ -27,7 +27,8 @@ const journeys = [
     badge: "Italy",
     image: "/images/italy.jpg",
     href: "/contact",
-    price: "",
+    price: "1,50,000",
+    brochureHref: "/packages/Mad%20Compass%20Italy%20Signature%20Itinerary.pdf",
   },
   {
     title: "Vietnam, from heritage to horizons",
@@ -37,7 +38,9 @@ const journeys = [
     badge: "Vietnam",
     image: "/images/vietnam.jpg",
     href: "/contact",
-    price: "",
+    price: "50,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Vietnam%20Signature%20Itinerary.pdf",
   },
   {
     title: "Sri Lanka coastal escape",
@@ -47,7 +50,9 @@ const journeys = [
     badge: "Sri Lanka",
     image: "/images/srilanka.jpg",
     href: "/contact",
-    price: "",
+    price: "30,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Sri%20Lanka%20Surf%20and%20Safari%20Itinerary.pdf",
   },
 ];
 
@@ -59,7 +64,8 @@ const japanJourney = {
   badge: "Japan",
   image: "/images/Japan-soft-luxury-discovery.jpg",
   href: "/contact",
-  price: "",
+  price: "1,60,000",
+  brochureHref: "/packages/Mad%20Compass%20Japan%20Signature%20Itinerary.pdf",
 };
 
 export const metadata: Metadata = {
