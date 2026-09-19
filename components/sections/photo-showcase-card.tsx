@@ -15,6 +15,7 @@ type PhotoShowcaseCardProps = {
   href: string;
   price?: string;
   brochureHref?: string;
+  unavailable?: boolean;
 };
 
 export function PhotoShowcaseCard({
@@ -26,6 +27,7 @@ export function PhotoShowcaseCard({
   href,
   price = "",
   brochureHref,
+  unavailable = false,
 }: PhotoShowcaseCardProps) {
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
 
@@ -76,15 +78,25 @@ export function PhotoShowcaseCard({
           <div className="flex flex-1 flex-col space-y-4 bg-[#9D0202] p-6">
             <p className="text-sm leading-7 text-[#d7c6b3]">{description}</p>
             <div className="mt-auto flex items-end justify-between gap-4 pt-2">
-              <div>
-                <p className="text-xs uppercase tracking-[0.16em] text-white/65">
-                  Starting from
-                </p>
-                <p className="mt-1 text-xl font-semibold tracking-tight text-white">
-                  {price ? `INR ${price}` : "On request"}
-                </p>
-                <p className="mt-1 text-xs text-white/65">per person</p>
-              </div>
+              {unavailable ? (
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex h-10 items-center rounded-full border border-white/25 bg-white/10 px-4 text-sm font-semibold text-white/80"
+                >
+                  Currently unavailable
+                </button>
+              ) : (
+                <div>
+                  <p className="text-xs uppercase tracking-[0.16em] text-white/65">
+                    Starting from
+                  </p>
+                  <p className="mt-1 text-xl font-semibold tracking-tight text-white">
+                    {price ? `INR ${price}` : "On request"}
+                  </p>
+                  <p className="mt-1 text-xs text-white/65">per person</p>
+                </div>
+              )}
               {brochureHref ? (
                 <button
                   type="button"

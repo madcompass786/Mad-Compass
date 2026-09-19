@@ -42,7 +42,7 @@ const journeys = [
     title: "Rajasthan heritage circuit",
     subtitle: "Palaces, forts, and private experiences between cities",
     description:
-      "Elegant pacing for culture lovers who want depth without rush.",
+      "Travel between grand palaces, historic forts, and vibrant old cities with private experiences, elegant stays, and an unhurried rhythm throughout.",
     badge: "Culture-led",
     image: "/images/rajasthan.jpg",
     href: "/contact",

@@ -47,28 +47,36 @@ const travelCards = [
 
 const featuredJourneys = [
   {
-    title: "Kerala backwater & hill retreat",
-    subtitle: "Slow travel across calm waterways and lush hills",
+    title: "Rajasthan heritage circuit",
+    subtitle: "Palaces, forts, and private experiences between cities",
     description:
-      "A personalized coastal and hill itinerary that blends heritage, enjoyment, wellness, and gentle exploration.",
-    badge: "Domestic inspiration",
-    image: "/images/Kerala-backwater-hill-retreat.jpg",
+      "Travel between grand palaces, historic forts, and vibrant old cities with private experiences, elegant stays, and an unhurried rhythm throughout.",
+    badge: "Culture-led",
+    image: "/images/rajasthan.jpg",
+    price: "50,000",
+    brochureHref: "/packages/Mad_Compass_Rajasthan_Heritage_Circuit.pdf",
   },
   {
-    title: "Japan soft luxury discovery",
-    subtitle: "Culture, food, and quiet temples",
+    title: "Meghalaya, where the hills breathe",
+    subtitle: "Waterfalls, living root bridges, and misty green valleys",
     description:
-      "Curated routes in Kyoto, Kanazawa, and Tokyo with comfort-led stays and authentic local experiences.",
-    badge: "Overseas mood",
-    image: "/images/Japan-soft-luxury-discovery.jpg",
+      "Explore Shillong, Cherrapunji, and quiet village landscapes through a refreshing journey shaped around nature, culture, and unhurried discovery.",
+    badge: "Hill escape",
+    image: "/images/meghalaya.jpg",
+    price: "30,000",
+    brochureHref:
+      "/packages/Mad%20Compass%20Meghalaya%20Signature%20Itinerary.pdf",
   },
   {
-    title: "Bhutan trek & cultural passage",
-    subtitle: "Highland trails, monasteries, and mindful pace",
+    title: "Italy, layered with la dolce vita",
+    subtitle:
+      "Art-filled cities, sunlit coastlines, and unforgettable flavours",
     description:
-      "A specialist-led expedition combining easy treks with immersive cultural moments through the Himalayas.",
-    badge: "Expedition route",
-    image: "/images/Bhutan-trek-cultural-passage.jpg",
+      "Move from Rome and Florence to the Amalfi Coast or Tuscany with thoughtfully paced stays, authentic food, and memorable local experiences.",
+    badge: "Italy",
+    image: "/images/italy.jpg",
+    price: "1,50,000",
+    brochureHref: "/packages/Mad%20Compass%20Italy%20Signature%20Itinerary.pdf",
   },
 ];
 
@@ -274,6 +282,8 @@ export default function Home() {
               badge={journey.badge}
               image={journey.image}
               href="/contact"
+              price={journey.price}
+              brochureHref={journey.brochureHref}
             />
           ))}
         </motion.div>
