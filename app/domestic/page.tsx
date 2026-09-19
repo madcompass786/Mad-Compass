@@ -26,6 +26,7 @@ const journeys = [
     badge: "Coastal escape",
     image: "/images/goa.jpg",
     href: "/contact",
+    price: "",
   },
   {
     title: "Darjeeling & Sikkim pause",
@@ -35,6 +36,7 @@ const journeys = [
     badge: "Mountain escape",
     image: "/images/darjeeling.jpg",
     href: "/contact",
+    price: "",
   },
   {
     title: "Rajasthan heritage circuit",
@@ -44,6 +46,37 @@ const journeys = [
     badge: "Culture-led",
     image: "/images/rajasthan.jpg",
     href: "/contact",
+    price: "",
+  },
+  {
+    title: "Meghalaya, where the hills breathe",
+    subtitle: "Waterfalls, living root bridges, and misty green valleys",
+    description:
+      "Explore Shillong, Cherrapunji, and quiet village landscapes through a refreshing journey shaped around nature, culture, and unhurried discovery.",
+    badge: "Hill escape",
+    image: "/images/meghalaya.jpg",
+    href: "/contact",
+    price: "",
+  },
+  {
+    title: "Kashmir, the great valley escape",
+    subtitle: "Alpine lakes, mountain meadows, and timeless hospitality",
+    description:
+      "Sail across Dal Lake, wander through Srinagar, and discover Gulmarg and Pahalgam with scenic stays and a carefully paced itinerary.",
+    badge: "Valley retreat",
+    image: "/images/kashmir.jpg",
+    href: "/contact",
+    price: "",
+  },
+  {
+    title: "Andaman Islands, at an easy island pace",
+    subtitle: "Turquoise waters, quiet beaches, and reef-side adventures",
+    description:
+      "Combine beachside stillness with island exploration, snorkelling, and clear-water escapes across one of India's most beautiful coastlines.",
+    badge: "Island escape",
+    image: "/images/andaman.jpg",
+    href: "/contact",
+    price: "",
   },
 ];
 

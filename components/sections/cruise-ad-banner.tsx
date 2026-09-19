@@ -13,6 +13,7 @@ const cruiseOffers = [
     cta: "View Disney brochure",
     pdf: "/cruises/Disney%20Cruise%20Line.pdf",
     image: "/images/disneyCruise.jpg",
+    price: "",
   },
   {
     eyebrow: "StarDream Cruises",
@@ -22,6 +23,7 @@ const cruiseOffers = [
     cta: "View StarDream brochure",
     pdf: "/cruises/Star%20Dream%20Cruises.pdf",
     image: "/images/star.jpg",
+    price: "",
   },
 ];
 
@@ -46,7 +48,7 @@ export function CruiseAdBanner() {
       {cruiseOffers.map((offer) => (
         <article
           key={offer.eyebrow}
-          className="group overflow-hidden rounded-4xl border border-[#ece7e4] bg-[#111111] text-white shadow-[0_24px_90px_rgba(17,17,17,0.16)] transition duration-300 hover:-translate-y-1"
+          className="group flex h-full flex-col overflow-hidden rounded-4xl border border-[#ece7e4] bg-[#111111] text-white shadow-[0_24px_90px_rgba(17,17,17,0.16)] transition duration-300 hover:-translate-y-1"
         >
           <div className="relative h-72 overflow-hidden">
             <Image
@@ -66,17 +68,22 @@ export function CruiseAdBanner() {
               </h3>
             </div>
           </div>
-          <div className="space-y-4 bg-[#9D0202] p-6">
+          <div className="flex flex-1 flex-col space-y-4 bg-[#9D0202] p-6">
             <p className="text-sm leading-7 text-[#f5d9cf]">
               {offer.description}
             </p>
-            <button
-              type="button"
-              onClick={() => setSelectedOffer(offer)}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:text-[#f6b4aa]"
-            >
-              {offer.cta} <ArrowUpRight className="size-4" />
-            </button>
+            <div className="mt-auto flex items-end justify-between gap-4 pt-2">
+              <p className="text-sm font-medium text-white/90">
+                Starting from INR{offer.price ? ` ${offer.price}` : ""}
+              </p>
+              <button
+                type="button"
+                onClick={() => setSelectedOffer(offer)}
+                className="inline-flex shrink-0 items-center gap-2 text-right text-sm font-semibold text-white transition group-hover:text-[#f6b4aa]"
+              >
+                {offer.cta} <ArrowUpRight className="size-4" />
+              </button>
+            </div>
           </div>
         </article>
       ))}

@@ -26,6 +26,7 @@ const journeys = [
     badge: "TREKKING",
     image: "/images/everest.jpg",
     href: "/contact",
+    price: "",
   },
   {
     title: "Everest Peaking",
@@ -35,6 +36,7 @@ const journeys = [
     badge: "SUMMIT",
     image: "/images/everest-peak.jpg",
     href: "/contact",
+    price: "",
   },
   {
     title: "Annapurna Circuit",
@@ -45,6 +47,7 @@ const journeys = [
     badge: "CIRCUIT",
     image: "/images/annapurna.jpg",
     href: "/contact",
+    price: "",
   },
 ];
 

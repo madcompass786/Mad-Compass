@@ -19,22 +19,25 @@ const highlights = [
 
 const journeys = [
   {
-    title: "Switzerland alpine escape",
-    subtitle: "Snow-capped peaks, scenic rail journeys, and lakeside villages",
+    title: "Italy, layered with la dolce vita",
+    subtitle:
+      "Art-filled cities, sunlit coastlines, and unforgettable flavours",
     description:
-      "Discover iconic mountain landscapes with luxury stays, panoramic train rides, and unforgettable alpine experiences.",
-    badge: "Switzerland",
-    image: "/images/switzerland.jpg",
+      "Move from Rome and Florence to the Amalfi Coast or Tuscany with thoughtfully paced stays, authentic food, and memorable local experiences.",
+    badge: "Italy",
+    image: "/images/italy.jpg",
     href: "/contact",
+    price: "",
   },
   {
-    title: "Bali tropical retreat",
-    subtitle: "Emerald rice terraces, beach sunsets, and wellness escapes",
+    title: "Vietnam, from heritage to horizons",
+    subtitle: "Ancient streets, spectacular landscapes, and vibrant local life",
     description:
-      "Unwind with private pool villas, cultural experiences, island adventures, and tranquil spa retreats.",
-    badge: "Bali",
-    image: "/images/bali.jpg",
+      "Discover Vietnam through Hanoi, Ha Long Bay, Hoi An, and beyond, balancing rich culture, regional cuisine, scenic escapes, and easy comfort.",
+    badge: "Vietnam",
+    image: "/images/vietnam.jpg",
     href: "/contact",
+    price: "",
   },
   {
     title: "Sri Lanka coastal escape",
@@ -44,6 +47,7 @@ const journeys = [
     badge: "Sri Lanka",
     image: "/images/srilanka.jpg",
     href: "/contact",
+    price: "",
   },
 ];
 
@@ -55,6 +59,7 @@ const japanJourney = {
   badge: "Japan",
   image: "/images/Japan-soft-luxury-discovery.jpg",
   href: "/contact",
+  price: "",
 };
 
 export const metadata: Metadata = {
