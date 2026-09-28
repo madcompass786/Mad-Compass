@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { CONVERSION_LABELS, trackConversion } from "@/lib/gtag";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -66,7 +67,19 @@ export function PageHero({
               variant="outline"
               className="border-none bg-green-400 hover:bg-white hover:border-black hover:border-2"
             >
-              <Link href={secondaryCta.href}>{secondaryCta.label}</Link>
+              <Link
+                href={secondaryCta.href}
+                onClick={(event) => {
+                  if (
+                    secondaryCta.href.startsWith("https://wa.me/") &&
+                    event.detail <= 1
+                  ) {
+                    trackConversion(CONVERSION_LABELS.whatsapp);
+                  }
+                }}
+              >
+                {secondaryCta.label}
+              </Link>
             </Button>
           </div>
         </motion.div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { siteContent } from "@/data/content";
 import { navigationLinks } from "@/lib/constants";
+import { TrackedWhatsAppLink } from "@/components/sections/tracked-whatsapp-link";
 import Image from "next/image";
 
 export function Footer() {
@@ -57,14 +58,25 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-[#e4d8c9]">
               {siteContent.socials.map((social) => (
                 <li key={social.label}>
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-white"
-                  >
-                    {social.label}
-                  </a>
+                  {social.label === "WhatsApp" ? (
+                    <TrackedWhatsAppLink
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-white"
+                    >
+                      {social.label}
+                    </TrackedWhatsAppLink>
+                  ) : (
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-white"
+                    >
+                      {social.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -5,6 +5,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/sections/reveal";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/content";
+import { TrackedWhatsAppLink } from "@/components/sections/tracked-whatsapp-link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Mad Compass",
@@ -311,7 +312,7 @@ export default function TermsPage() {
             Still have questions?
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-[#17120f] sm:text-4xl">
-            Not sure where to begin? Let's figure it out together.
+            Not sure where to begin? Let&apos;s figure it out together.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#655b4f]">
             Our specialists are happy to walk you through anything before you
@@ -331,9 +332,13 @@ export default function TermsPage() {
               variant="outline"
               className="border-[#efe2dc] bg-green-400 text-[#17120f]"
             >
-              <a href={siteContent.whatsapp} target="_blank" rel="noreferrer">
+              <TrackedWhatsAppLink
+                href={siteContent.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <MessageCircle className="size-4" /> WhatsApp us
-              </a>
+              </TrackedWhatsAppLink>
             </Button>
           </div>
         </div>

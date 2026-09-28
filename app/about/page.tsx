@@ -8,6 +8,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Reveal } from "@/components/sections/reveal";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { siteContent } from "@/data/content";
+import { TrackedWhatsAppLink } from "@/components/sections/tracked-whatsapp-link";
 // testimonials data is used inside the TestimonialSection component
 
 const values = [
@@ -82,9 +83,13 @@ export default function AboutPage() {
                 variant="outline"
                 className="border-[#efe2dc] bg-green-400 text-[#17120f] shadow-[0_10px_24px_rgba(17,17,17,0.06)] hover:border-[#c20b0b] hover:text-[#c20b0b] hover:bg-[#fff7f4] hover:shadow-[0_14px_30px_rgba(17,17,17,0.08)]"
               >
-                <a href={siteContent.whatsapp} target="_blank" rel="noreferrer">
+                <TrackedWhatsAppLink
+                  href={siteContent.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <MessageCircle className="size-4" /> WhatsApp us
-                </a>
+                </TrackedWhatsAppLink>
               </Button>
             </div>
           </div>
@@ -163,9 +168,13 @@ export default function AboutPage() {
               variant="outline"
               className="border-[#efe2dc] bg-green-400 text-[#17120f]"
             >
-              <a href={siteContent.whatsapp} target="_blank" rel="noreferrer">
+              <TrackedWhatsAppLink
+                href={siteContent.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+              >
                 WhatsApp us
-              </a>
+              </TrackedWhatsAppLink>
             </Button>
           </div>
         </div>

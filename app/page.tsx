@@ -11,6 +11,7 @@ import { PhotoShowcaseCard } from "@/components/sections/photo-showcase-card";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { TrustStats } from "@/components/sections/trust-stats";
 import { siteContent } from "@/data/content";
+import { TrackedWhatsAppLink } from "@/components/sections/tracked-whatsapp-link";
 
 const sections = [
   { id: "discover", label: "Discover" },
@@ -121,13 +122,13 @@ export default function Home() {
                   variant="outline"
                   className="border-[#efe2dc] bg-green-400 text-[#17120f] shadow-[0_10px_24px_rgba(17,17,17,0.06)] hover:-translate-y-0.5 hover:border-[#c20b0b] hover:text-[#c20b0b] hover:bg-[#fff7f4] hover:shadow-[0_14px_30px_rgba(17,17,17,0.08)]"
                 >
-                  <Link
+                  <TrackedWhatsAppLink
                     href={siteContent.whatsapp}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <MessageCircle className="size-4" /> WhatsApp us
-                  </Link>
+                  </TrackedWhatsAppLink>
                 </Button>
               </div>
             </motion.div>

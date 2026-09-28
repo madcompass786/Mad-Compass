@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/content";
+import { CONVERSION_LABELS, trackConversion } from "@/lib/gtag";
 
 export function HeroSection() {
   return (
@@ -29,13 +30,26 @@ export function HeroSection() {
             {siteContent.heroSubtext}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="bg-[#c20b0b] shadow-[0_16px_35px_rgba(194,11,11,0.22)] hover:bg-[#a70a0a] hover:shadow-[0_20px_42px_rgba(194,11,11,0.3)]">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#c20b0b] shadow-[0_16px_35px_rgba(194,11,11,0.22)] hover:bg-[#a70a0a] hover:shadow-[0_20px_42px_rgba(194,11,11,0.3)]"
+            >
               <Link href="/contact">
                 Plan My Journey <ArrowRight className="size-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href={siteContent.whatsapp} target="_blank" rel="noreferrer">
+              <Link
+                href={siteContent.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => {
+                  if (event.detail <= 1) {
+                    trackConversion(CONVERSION_LABELS.whatsapp);
+                  }
+                }}
+              >
                 <MessageCircle className="size-4" /> WhatsApp Now
               </Link>
             </Button>
