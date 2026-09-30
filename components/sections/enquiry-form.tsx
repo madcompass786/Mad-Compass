@@ -383,7 +383,7 @@ export function EnquiryForm() {
             <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#6b534d] sm:text-base">
               We will be in touch soon with a tailored first recommendation and
               next steps. If you prefer, you can also reach us directly on
-              WhatsApp at +91 9711193458.
+              WhatsApp at {siteContent.phone}.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Button

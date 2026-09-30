@@ -54,18 +54,29 @@ const journeys = [
     brochureHref:
       "/packages/Mad%20Compass%20Sri%20Lanka%20Surf%20and%20Safari%20Itinerary.pdf",
   },
+  {
+    title: "Japan soft luxury discovery",
+    subtitle: "Culture, food, and quiet temples",
+    description:
+      "Curated routes through Kyoto, Kanazawa, and Tokyo with comfort-led stays and authentic local experiences.",
+    badge: "Japan",
+    image: "/images/Japan-soft-luxury-discovery.jpg",
+    href: "/contact",
+    price: "1,60,000",
+    brochureHref: "/packages/Mad%20Compass%20Japan%20Signature%20Itinerary.pdf",
+  },
 ];
 
-const japanJourney = {
-  title: "Japan soft luxury discovery",
-  subtitle: "Culture, food, and quiet temples",
+const scandinaviaJourney = {
+  title: "Scandinavia with Northern Lights",
+  subtitle: "Royal capitals, a Baltic crossing, and Arctic wonder",
   description:
-    "Curated routes through Kyoto, Kanazawa, and Tokyo with comfort-led stays and authentic local experiences.",
-  badge: "Japan",
-  image: "/images/Japan-soft-luxury-discovery.jpg",
+    "Journey through Norway, Sweden, Finland, and Estonia with fjord views, overnight travel, Santa's Village, husky sledding, and a Northern Lights hunt.",
+  badge: "Scandinavia",
+  image: "/images/polar.jpg",
   href: "/contact",
-  price: "1,60,000",
-  brochureHref: "/packages/Mad%20Compass%20Japan%20Signature%20Itinerary.pdf",
+  price: "3,70,000",
+  brochureHref: "/packages/Glimpses_of_Scandinavia_with_Northern_Lights.pdf",
 };
 
 export const metadata: Metadata = {
@@ -136,7 +147,7 @@ export default function OverseasPage() {
         </div>
       </Reveal>
 
-      <Reveal className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-12">
+      <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-12">
         <div className="mb-10 max-w-3xl">
           <p className="flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-[red]">
             Cruise your way into an unforgettable escape
@@ -151,15 +162,13 @@ export default function OverseasPage() {
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
+          <PhotoShowcaseCard {...scandinaviaJourney} />
           <CruiseAdBanner />
-          <PhotoShowcaseCard {...japanJourney} />
-        </div>
-        <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {journeys.map((journey) => (
             <PhotoShowcaseCard key={journey.title} {...journey} />
           ))}
         </div>
-      </Reveal>
+      </section>
 
       <Reveal className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-12">
         <div className="max-w-3xl rounded-4xl border border-[#efe2dc] bg-white p-8 shadow-[0_24px_80px_rgba(17,17,17,0.05)]">

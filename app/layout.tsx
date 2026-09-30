@@ -61,7 +61,7 @@ export default function RootLayout({
     "@type": "TravelAgency",
     name: "Mad Compass",
     url: "https://madcompass.com",
-    telephone: "+919711193458",
+    telephone: "+919654016813",
     email: "hello@madcompass.com",
     address: {
       "@type": "PostalAddress",

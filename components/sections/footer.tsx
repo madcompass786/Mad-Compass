@@ -26,9 +26,14 @@ export function Footer() {
             Here to take you places!
           </h2>
           <p className="mt-4 text-sm leading-7 text-[#d7c6b3]">
-            {siteContent.address}
+            Kolkata - NBCC VIBGYOR TOWERS, New Town | +91 97111 93458
           </p>
-          <p className="mt-1 text-sm text-[#d7c6b3]">{siteContent.phone}</p>
+          <p className="mt-1 text-sm leading-7 text-[#d7c6b3]">
+            Delhi - Sector 10, Rohini | +91 96540 16813
+          </p>
+          <p className="mt-1 text-sm leading-7 text-[#d7c6b3]">
+            Dehradun - Sikka Kimaya Greens, Doon IT Park | +91 97111 93458
+          </p>
           <p className="mt-1 text-sm text-[#d7c6b3]">hello@madcompass.com</p>
         </div>
         <div className="flex flex-col gap-8 sm:flex-row">

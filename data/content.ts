@@ -28,15 +28,15 @@ export const siteContent: SiteContent = {
     "Thoughtful holidays shaped around your pace, your people, and the stories you want to bring home.",
   heroSubtext:
     "We plan with intention rather than templates — pairing local insight, calm logistics, and personal guidance so every journey feels considered from the first conversation.",
-  address: "Kolkata, India",
+  address: "Kolkata, India\nDelhi, India\nDehradun, India",
   gst: "GST: 19AAXXX0000X1ZX",
-  phone: "+91 9711193458",
-  whatsapp: "https://wa.me/919711193458",
+  phone: "+91 96540 16813",
+  whatsapp: "https://wa.me/919654016813",
   email: "tamraparna.k@gmail.com",
   hours: "Mon–Sat · 10:00 AM – 7:00 PM",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/mad.compass/" },
-    { label: "WhatsApp", href: "https://wa.me/919711193458" },
+    { label: "WhatsApp", href: "https://wa.me/919654016813" },
     { label: "Facebook", href: "https://www.facebook.com/madcompass.ccu/" },
   ],
 };

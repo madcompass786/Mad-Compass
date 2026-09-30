@@ -31,16 +31,19 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="rounded-4xl border border-[#efe2dc] bg-white p-8 shadow-[0_24px_80px_rgba(17,17,17,0.05)]">
               <p className="text-sm uppercase tracking-[0.3em] text-[#c20b0b]">
-                Visit or connect
+                Let&apos;s Connect
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-[#17120f] sm:text-4xl">
-                We are based in Kolkata and ready to plan with you.
+                Tell us what you are dreaming of, and we will help shape the
+                journey.
               </h2>
               <div className="mt-6 grid gap-4 text-sm leading-7 text-[#5d4944] sm:grid-cols-2">
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
-                    <span>{siteContent.address}</span>
+                    <span className="whitespace-pre-line">
+                      {siteContent.address}
+                    </span>
                   </div>
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">

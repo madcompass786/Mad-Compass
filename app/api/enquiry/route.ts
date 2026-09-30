@@ -8,7 +8,10 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     if (!body?.name || !body?.phone || !body?.email) {
-      return NextResponse.json({ success: false, message: "Missing required fields" }, { status: 400 });
+      return NextResponse.json(
+        { success: false, message: "Missing required fields" },
+        { status: 400 },
+      );
     }
 
     const ownerMessage = [
@@ -42,7 +45,7 @@ export async function POST(request: NextRequest) {
       "recommendation shortly.",
       "",
       "In the meantime, feel free to reach us directly:",
-      "Phone/WhatsApp: +91 9711193458",
+      `Phone/WhatsApp: ${siteContent.phone}`,
       "Email: hello@madcompass.com",
       "",
       "Here to take you places!",
@@ -60,7 +63,10 @@ export async function POST(request: NextRequest) {
 
     if (!smtpUrl && (!smtpHost || !smtpUser || !smtpPass)) {
       console.error("Missing SMTP configuration for enquiry email delivery.");
-      return NextResponse.json({ success: false, message: "Email service is not configured yet." }, { status: 500 });
+      return NextResponse.json(
+        { success: false, message: "Email service is not configured yet." },
+        { status: 500 },
+      );
     }
 
     const transporter = nodemailer.createTransport(
@@ -74,7 +80,7 @@ export async function POST(request: NextRequest) {
               user: smtpUser,
               pass: smtpPass,
             },
-          }
+          },
     );
 
     const ownerSubject = `New Enquiry — ${body.name} | Mad Compass`;
@@ -94,12 +100,15 @@ export async function POST(request: NextRequest) {
       replyTo: mailTo,
       subject: "We've received your enquiry — Mad Compass",
       text: userMessage,
-      html: `<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #17120f;"><p>Hi ${body.name || "there"},</p><p>Thank you for reaching out to Mad Compass. We've received your enquiry and a holiday specialist will be in touch with a tailored first recommendation shortly.</p><p>In the meantime, feel free to reach us directly:<br />Phone/WhatsApp: +91 9711193458<br />Email: hello@madcompass.com</p><p>Here to take you places!<br />Mad Compass Tours & Travels</p></div>`,
+      html: `<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #17120f;"><p>Hi ${body.name || "there"},</p><p>Thank you for reaching out to Mad Compass. We've received your enquiry and a holiday specialist will be in touch with a tailored first recommendation shortly.</p><p>In the meantime, feel free to reach us directly:<br />Phone/WhatsApp: ${siteContent.phone}<br />Email: hello@madcompass.com</p><p>Here to take you places!<br />Mad Compass Tours & Travels</p></div>`,
     });
 
     return NextResponse.json({ success: true, message: "Enquiry received" });
   } catch (error) {
     console.error("Enquiry email delivery failed:", error);
-    return NextResponse.json({ success: false, message: "Failed to submit enquiry" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: "Failed to submit enquiry" },
+      { status: 500 },
+    );
   }
 }

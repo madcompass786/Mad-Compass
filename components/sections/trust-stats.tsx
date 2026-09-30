@@ -3,13 +3,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "12+", label: "years active", note: "TODO: confirm with client" },
-  { value: "300+", label: "trips planned", note: "TODO: confirm with client" },
-  {
-    value: "25+",
-    label: "destinations covered",
-    note: "TODO: confirm with client",
-  },
+  { value: "8+", label: "Years in hospitality" },
+  { value: "300+", label: "Holidays Planned" },
+  { value: "50+", label: "Destinations covered" },
 ];
 
 export function TrustStats() {
