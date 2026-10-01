@@ -8,6 +8,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Reveal } from "@/components/sections/reveal";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { siteContent } from "@/data/content";
+
 import { TrackedWhatsAppLink } from "@/components/sections/tracked-whatsapp-link";
 // testimonials data is used inside the TestimonialSection component
 
