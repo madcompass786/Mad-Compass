@@ -39,11 +39,13 @@ export default function ContactPage() {
               </h2>
               <div className="mt-6 grid gap-4 text-sm leading-7 text-[#5d4944] sm:grid-cols-2">
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
-                    <span className="whitespace-pre-line">
-                      {siteContent.address}
-                    </span>
+                  <div className="space-y-1">
+                    {siteContent.address.split("\n").map((location) => (
+                      <div key={location} className="flex items-start gap-3">
+                        <MapPin className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
+                        <span>{location}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">
@@ -53,14 +55,18 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">
-                  <div className="flex items-start gap-3">
-                    <Phone className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
-                    <a
-                      href={`tel:${siteContent.phone}`}
-                      className="hover:text-[#c20b0b]"
-                    >
-                      {siteContent.phone}
-                    </a>
+                  <div className="flex flex-col gap-1">
+                    {[siteContent.phone, "+91 96540 16813"].map((phone) => (
+                      <div key={phone} className="flex items-start gap-3">
+                        <Phone className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
+                        <a
+                          href={`tel:${phone}`}
+                          className="hover:text-[#c20b0b]"
+                        >
+                          {phone}
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">

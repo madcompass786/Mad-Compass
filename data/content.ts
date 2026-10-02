@@ -30,7 +30,7 @@ export const siteContent: SiteContent = {
     "We plan with intention rather than templates — pairing local insight, calm logistics, and personal guidance so every journey feels considered from the first conversation.",
   address: "Kolkata, India\nDelhi, India\nDehradun, India",
   gst: "GST: 19AAXXX0000X1ZX",
-  phone: "+91 96540 16813",
+  phone: "+91 97111 93458",
   whatsapp: "https://wa.me/919654016813",
   email: "tamraparna.k@gmail.com",
   hours: "Mon–Sat · 10:00 AM – 7:00 PM",

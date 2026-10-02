@@ -79,6 +79,31 @@ const scandinaviaJourney = {
   brochureHref: "/packages/Glimpses_of_Scandinavia_with_Northern_Lights.pdf",
 };
 
+const bhutanJourney = {
+  title: "Bhutan Romantic Escape",
+  subtitle: "Dzongs, monasteries, and Himalayan romance",
+  description:
+    "A private couple's journey through Phuentsholing, Thimphu, Punakha, and Paro, with Himalayan passes, Tiger's Nest, and a candlelight dinner.",
+  badge: "Bhutan",
+  image: "/images/Bhutan-trek-cultural-passage.jpg",
+  href: "/contact",
+  price: "2,20,000",
+  priceUnit: "per couple",
+  brochureHref: "/packages/Bhutan_Romantic_Escape_with_Mad_Compass.pdf",
+};
+
+const egyptJourney = {
+  title: "Treasures of Egypt",
+  subtitle: "Ancient wonders, the Nile, and the Red Sea",
+  description:
+    "Discover Cairo and Giza, travel south by sleeper train, cruise the Nile past ancient temples, and unwind on the Red Sea coast in Hurghada.",
+  badge: "Egypt",
+  image: "/images/egypt.jpg",
+  href: "/contact",
+  price: "1,40,000",
+  brochureHref: "/packages/Treasures_of_Egypt_Mad_Compass.pdf",
+};
+
 export const metadata: Metadata = {
   title: "Overseas Travel | Mad Compass",
   description:
@@ -163,6 +188,8 @@ export default function OverseasPage() {
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
           <PhotoShowcaseCard {...scandinaviaJourney} />
+          <PhotoShowcaseCard {...bhutanJourney} />
+          <PhotoShowcaseCard {...egyptJourney} />
           <CruiseAdBanner />
           {journeys.map((journey) => (
             <PhotoShowcaseCard key={journey.title} {...journey} />

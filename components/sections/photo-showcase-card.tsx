@@ -14,6 +14,7 @@ type PhotoShowcaseCardProps = {
   image: string;
   href: string;
   price?: string;
+  priceUnit?: string;
   brochureHref?: string;
   unavailable?: boolean;
 };
@@ -26,6 +27,7 @@ export function PhotoShowcaseCard({
   image,
   href,
   price = "",
+  priceUnit = "per person",
   brochureHref,
   unavailable = false,
 }: PhotoShowcaseCardProps) {
@@ -94,7 +96,7 @@ export function PhotoShowcaseCard({
                   <p className="mt-1 text-xl font-semibold tracking-tight text-white">
                     {price ? `INR ${price}` : "On request"}
                   </p>
-                  <p className="mt-1 text-xs text-white/65">per person</p>
+                  <p className="mt-1 text-xs text-white/65">{priceUnit}</p>
                 </div>
               )}
               {brochureHref ? (
