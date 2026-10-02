@@ -38,6 +38,7 @@ const journeys = [
   //   href: "/contact",
   //   price: "",
   // },
+
   {
     title: "Rajasthan heritage circuit",
     subtitle: "Palaces, forts, and private experiences between cities",
