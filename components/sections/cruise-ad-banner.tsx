@@ -77,6 +77,7 @@ export function CruiseAdBanner() {
                 <p className="text-xs uppercase tracking-[0.16em] text-white/65">
                   Starting from
                 </p>
+
                 <p className="mt-1 text-xl font-semibold tracking-tight text-white">
                   {offer.price ? `INR ${offer.price}` : "On request"}
                 </p>
