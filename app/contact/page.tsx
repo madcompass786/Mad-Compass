@@ -56,17 +56,26 @@ export default function ContactPage() {
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">
                   <div className="flex flex-col gap-1">
-                    {[siteContent.phone, "+91 96540 16813"].map((phone) => (
-                      <div key={phone} className="flex items-start gap-3">
+                    <div className="flex flex-col items-start gap-3">
+                      <div className="flex items-start gap-3">
                         <Phone className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
                         <a
-                          href={`tel:${phone}`}
+                          href={`tel:${siteContent.phone}`}
                           className="hover:text-[#c20b0b]"
                         >
-                          {phone}
+                          {siteContent.phone}
                         </a>
                       </div>
-                    ))}
+                      <div className="flex items-start gap-3">
+                        <Phone className="mt-1 size-4 shrink-0 text-[#c20b0b]" />
+                        <a
+                          href="+91 97111 93458"
+                          className="hover:text-[#c20b0b]"
+                        >
+                          +91 97111 93458
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-3xl border border-[#efe2dc] bg-[#fffdfc] p-4">

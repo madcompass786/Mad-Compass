@@ -78,7 +78,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="flex min-h-screen flex-col bg-white text-[#111111]">
+      <body
+        className="flex min-h-screen flex-col bg-white text-[#111111]"
+        suppressHydrationWarning
+      >
         {process.env.NODE_ENV === "production" ? (
           <>
             <Script
