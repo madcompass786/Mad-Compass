@@ -50,6 +50,7 @@ const journeys = [
     price: "50,000",
     brochureHref: "/packages/Mad_Compass_Rajasthan_Heritage_Circuit.pdf",
   },
+
   {
     title: "Meghalaya, where the hills breathe",
     subtitle: "Waterfalls, living root bridges, and misty green valleys",
